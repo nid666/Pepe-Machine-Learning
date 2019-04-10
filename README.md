@@ -11,3 +11,4 @@ python3 test.py
 ```
 ---
 You might have to pip install dependencies for the test.py file
+This only works for jpg images. All png images in test_images will be ignored
