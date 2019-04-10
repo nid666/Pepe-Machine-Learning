@@ -1,6 +1,6 @@
 # Pepe-Machine-Learning
 An image classification program that uses machine learning to tell whether an image is a "pepe" or not. The model was trained on 3000 different pepe images. 
-![alt text](https://github.com/nid666/Pepe-Machine-Learning/blob/master/test_images/5845cd430b2a3b54fdbaecf8.png)
+![alt text](https://github.com/nid666/Pepe-Machine-Learning/blob/master/test_images/5845cd430b2a3b54fdbaecf8.png){:height="48px" width="48px"}
 ---
 # Install
 ```console
