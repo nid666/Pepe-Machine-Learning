@@ -80,7 +80,7 @@ def main():
 
             # convert the OpenCV image (numpy array) to a TensorFlow image
             tfImage = np.array(openCVImage)[:, :, 0:3]
-            
+
             # run the network to get the predictions
             predictions = sess.run(finalTensor, {'DecodeJpeg:0': tfImage})
 
@@ -110,17 +110,19 @@ def main():
                     scoreAsAPercent = confidence * 100.0
                     if scoreAsAPercent > 80:
                         if strClassification != "pepe":
-                            print("not a pepe")
+                            os.remove(imageFileWithPath)
+                            print("not a pepe - file deleted")
                         else:
                             print("is a pepe")
                     else:
+                        os.remove(imageFileWithPath)
                         print("not a pepe")
                     # show the result to std out
                 #    print("the object appears to be a " + strClassification + ", " + "{0:.2f}".format(scoreAsAPercent) + "% confidence")
                     # write the result on the image
-                    writeResultOnImage(openCVImage, strClassification + ", " + "{0:.2f}".format(scoreAsAPercent) + "% confidence")
+                #    writeResultOnImage(openCVImage, strClassification + ", " + "{0:.2f}".format(scoreAsAPercent) + "% confidence")
                     # finally we can show the OpenCV image
-                    cv2.imshow(fileName, openCVImage)
+                #    cv2.imshow(fileName, openCVImage)
                     # mark that we've show the most likely prediction at this point so the additional information in
                     # this if statement does not show again for this image
                     onMostLikelyPrediction = False
@@ -131,9 +133,9 @@ def main():
             # end for
 
             # pause until a key is pressed so the user can see the current image (shown above) and the prediction info
-            cv2.waitKey()
+        #    cv2.waitKey()
             # after a key is pressed, close the current window to prep for the next time around
-            cv2.destroyAllWindows()
+        #    cv2.destroyAllWindows()
         # end for
     # end with
 
