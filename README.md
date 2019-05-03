@@ -17,7 +17,7 @@ unzip data.zip
 python3 scraper.py
 python3 test.py
 ```
-## Windows and Machine
+## Windows and Mac
 1. Download repository
 2. install all dependencies using pip (same as Linux instructions)
 3. go into cloned repo and select all zip files and extract it in the directory
